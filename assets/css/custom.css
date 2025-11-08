@@ -1,109 +1,135 @@
-/* === Terminal/ZSH Theme Overrides === */
+/* === Dark Terminal Theme Clean Version === */
 
 /* General body */
 body {
   background-color: #0d0d0d; /* very dark background */
-  color: #00ff00; /* bright green text */
+  color: #F5F5F5; /* normal text white */
   font-family: 'Fira Code', 'Courier New', monospace;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
 /* Header (site name and subtitle) */
 .site-name a {
-  color: #00ff88; /* brighter green for title */
-  font-size: 2rem;
+  color: #00ff00; /* bright green for main title */
+  font-size: 2.5rem;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 0 0 2px rgba(0, 255, 136, 0.5);
+  display: inline-block;
+  margin-bottom: 0.2rem;
 }
 
 .site-description {
-  color: #a0ffcc; /* lighter green for subtitle */
-  font-size: 1rem;
-  margin-top: 0.2rem;
-  text-shadow: 0 0 2px rgba(160, 255, 204, 0.5);
+  color: #FFD700; /* gold subtitle */
+  font-size: 1.2rem;
+  margin-top: 0;
+  display: inline-block;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #00ff00; /* bright green */
-  border-bottom: 1px solid #00ff00;
-  padding-bottom: 0.2em;
-  margin-top: 1.2em;
-}
-
-/* Links */
-a {
-  color: #00ffff; /* cyan links */
-  text-decoration: underline;
-}
-a:hover {
-  color: #ff00ff; /* magenta on hover */
+/* Header layout */
+.wrapper-masthead .masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #333;
 }
 
 /* Navigation links */
 nav a {
-  color: #00ffff; /* cyan nav links */
+  color: #00FFFF; /* cyan nav links */
   margin-left: 1rem;
   font-weight: 500;
+  text-decoration: none;
 }
 nav a:hover {
-  color: #ff00ff;
+  color: #FFD700; /* gold on hover */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #FFD700; /* gold for headings/subtitles */
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #555; /* subtle underline for structure */
+  padding-bottom: 0.2em;
+}
+
+/* Paragraphs */
+p {
+  color: #F5F5F5;
+  margin: 0.8em 0;
+}
+
+/* Links in text */
+a {
+  color: #00FFFF; /* cyan links */
+  text-decoration: underline;
+}
+a:hover {
+  color: #FFD700; /* gold on hover */
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 2em;
+  color: #F5F5F5;
 }
 
 /* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #0a0a0a; /* dark background */
-  color: #00ff00; /* bright green text */
+  background-color: #1a1a1a; /* slightly lighter dark */
+  color: #F5F5F5; /* white text */
   margin: 1em 0;
 }
 
 table th, table td {
-  border: 1px solid #00ff00;
-  padding: 0.5em;
+  border: 1px solid #555;
+  padding: 0.6em;
   text-align: left;
 }
 
+table th {
+  color: #FFD700; /* gold headers */
+}
+
 table tr:nth-child(even) {
-  background-color: #111111; /* slightly darker stripe */
+  background-color: #111111;
 }
 
 /* Code blocks */
 pre, code {
-  background-color: #000000;
-  color: #00ff00;
-  padding: 0.5em;
-  border-radius: 3px;
+  background-color: #101010;
+  color: #F5F5F5;
+  padding: 0.5em 0.7em;
+  border-radius: 4px;
   font-family: 'Fira Code', monospace;
   overflow-x: auto;
 }
 
 /* Blockquotes */
 blockquote {
-  color: #00ff00;
-  border-left: 3px solid #00ff00;
+  color: #FFD700;
+  border-left: 3px solid #FFD700;
   padding-left: 1em;
   margin: 1em 0;
-  background-color: #0a0a0a;
-}
-
-/* Lists */
-ul, ol {
-  margin-left: 1.5em;
+  background-color: #1a1a1a;
 }
 
 /* Horizontal rules */
 hr {
   border: 0;
-  border-top: 1px solid #00ff00;
+  border-top: 1px solid #555;
+  margin: 2em 0;
 }
 
 /* Images */
 img {
-  border: 1px solid #00ff00;
+  border: 1px solid #555;
   max-width: 100%;
   display: block;
   margin: 1em 0;
@@ -114,34 +140,35 @@ img {
   background-color: #0d0d0d;
   border-top: 1px solid #333;
   text-align: center;
-  padding: 1rem 0;
-  color: #00ff00;
+  padding: 1.5rem 2rem;
+  color: #F5F5F5;
 }
 
 .wrapper-footer a {
-  color: #00ffff;
+  color: #00FFFF;
   margin: 0 8px;
   text-decoration: none;
 }
-
 .wrapper-footer a:hover {
-  color: #ff00ff;
+  color: #FFD700;
 }
 
 /* SVG icons inside footer */
 .footer svg {
-  fill: #00ffff;
+  fill: #00FFFF;
 }
 .footer svg:hover {
-  fill: #ff00ff;
+  fill: #FFD700;
 }
 
 /* Main container spacing */
 #main.container {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Optional: subtle glow effect for text */
-body, h1, h2, h3, h4, h5, h6, p, a, li, td, th {
-  text-shadow: 0 0 1px #00ff00;
+/* Optional: subtle glow for main title */
+.site-name a {
+  text-shadow: 0 0 3px rgba(0, 255, 0, 0.5);
 }
