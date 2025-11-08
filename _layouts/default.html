@@ -1,154 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      {% if page.title %}{{ page.title }} – {% endif %}
-      {{ site.name }} – {{ site.description }}
-    </title>
+<head>
+  <title>
+    {% if page.title %}{{ page.title }} – {% endif %}
+    {{ site.name }} – {{ site.description }}
+  </title>
 
-    {% include meta.html %}
+  {% include meta.html %}
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="{{ site.name }} - {{ site.description }}"
-      href="{{ site.baseurl }}/feed.xml"
-    />
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/custom.css" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+  <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="{{ site.name }} - {{ site.description }}"
+          href="{{ site.baseurl }}/feed.xml"
+  />
 
-    <style>
-      body {
-        background-color: #1e1e1e;
-        color: #dcdcdc;
-        font-family: "Fira Code", "Consolas", "Menlo", monospace;
-        margin: 0;
-        padding: 0;
-      }
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
+          rel="stylesheet"
+  />
+</head>
 
-      /* HEADER (masthead) */
-      .wrapper-masthead {
-        background-color: #1e1e1e;
-        border-bottom: 1px solid #333;
-        padding: 1rem 0;
-      }
+<body>
+<!-- Header -->
+<div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      <a href="{{ site.baseurl }}/" class="site-avatar">
+        <img src="{{ site.avatar }}" alt="{{ site.name }}" />
+      </a>
 
-      .masthead {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .site-avatar img {
-        border-radius: 50%;
-        border: 2px solid #00ff88;
-        width: 64px;
-        height: 64px;
-      }
-
-      .site-name a {
-        color: #00ff88;
-        text-decoration: none;
-      }
-
-      .site-description {
-        color: #61afef;
-        font-size: 0.9rem;
-        margin-top: 4px;
-      }
-
-      nav a {
-        color: #61afef;
-        text-decoration: none;
-        margin-left: 15px;
-        font-size: 0.95rem;
-      }
-
-      nav a:hover {
-        color: #98c379;
-      }
-
-      /* MAIN CONTENT */
-      #main.container {
-        padding: 1rem;
-      }
-
-      /* FOOTER */
-      .wrapper-footer {
-        background-color: #1e1e1e;
-        border-top: 1px solid #333;
-        text-align: center;
-        padding: 1rem 0;
-        color: #888;
-      }
-
-      .wrapper-footer a {
-        color: #61afef;
-        margin: 0 8px;
-        text-decoration: none;
-      }
-
-      .wrapper-footer a:hover {
-        color: #98c379;
-      }
-
-      /* SVG icons inside footer */
-      .footer svg {
-        fill: #61afef;
-      }
-
-      .footer svg:hover {
-        fill: #98c379;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Header -->
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"
-            ><img src="{{ site.avatar }}" alt="{{ site.name }}"
-          /></a>
-
-          <div class="site-info">
-            <h1 class="site-name">
-              <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-            </h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+      <div class="site-info">
+        <h1 class="site-name">
+          <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+        </h1>
+        <p class="site-description">{{ site.description }}</p>
       </div>
-    </div>
 
-    <!-- Main -->
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+      <nav>
+        <a href="{{ site.baseurl }}/">Blog</a>
+        <a href="{{ site.baseurl }}/about">About</a>
+      </nav>
+    </header>
+  </div>
+</div>
 
-    <!-- Footer -->
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-          <div style="margin-top: 8px; font-size: 0.9rem;">
-            © {{ site.name }} {{ site.time | date: "%Y" }}
-          </div>
-        </footer>
+<!-- Main Content -->
+<div id="main" role="main" class="container">
+  {{ content }}
+</div>
+
+<!-- Footer -->
+<div class="wrapper-footer">
+  <div class="container">
+    <footer class="footer">
+      {% include svg-icons.html %}
+      <div style="margin-top: 8px; font-size: 0.9rem;">
+        © {{ site.name }} {{ site.time | date: "%Y" }}
       </div>
-    </div>
+    </footer>
+  </div>
+</div>
 
-    {% include analytics.html %}
-  </body>
+{% include analytics.html %}
+</body>
 </html>

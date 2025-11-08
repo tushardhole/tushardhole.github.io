@@ -1,0 +1,78 @@
+/* === Terminal/ZSH Theme Overrides === */
+
+/* General body */
+body {
+  background-color: #0d0d0d; /* very dark background */
+  color: #00ff00; /* bright green text */
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #00ff00; /* bright green */
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 0.2em;
+}
+
+/* Links */
+a {
+  color: #00ffff; /* cyan links */
+  text-decoration: underline;
+}
+a:hover {
+  color: #ff00ff; /* magenta on hover */
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #0a0a0a; /* dark background */
+  color: #00ff00; /* bright green text */
+  margin: 1em 0;
+}
+
+table th, table td {
+  border: 1px solid #00ff00;
+  padding: 0.5em;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: #111111; /* slightly darker stripe */
+}
+
+/* Code blocks */
+pre, code {
+  background-color: #000000;
+  color: #00ff00;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Blockquotes */
+blockquote {
+  color: #00ff00;
+  border-left: 3px solid #00ff00;
+  padding-left: 1em;
+  margin: 1em 0;
+  background-color: #0a0a0a;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 1.5em;
+}
+
+/* Horizontal rules */
+hr {
+  border: 0;
+  border-top: 1px solid #00ff00;
+}
+
+/* Optional: make images pop on dark background */
+img {
+  border: 1px solid #00ff00;
+  max-width: 100%;
+}
