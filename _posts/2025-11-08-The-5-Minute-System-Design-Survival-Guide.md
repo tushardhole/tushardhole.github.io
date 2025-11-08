@@ -26,37 +26,19 @@ System design interviews can be intimidating, but a few **core concepts** will h
 ## Quick Observability Diagram
 
 ```text
-         +----------------+
-         |      App       |
-         | Exposes /metrics|
-         +--------+-------+
-                  |
-                  v
-         +----------------+
-         |   Prometheus   |
-         | Scrapes metrics|
-         | every 15 secs  |
-         +--------+-------+
-                  |
-                  v
-         +----------------+
-         |    Grafana     |
-         | Visualizes     |
-         | metrics        |
-         +----------------+
++-----------------+      +----------------+      +----------------+
+|      App        | ---> |   Prometheus   | ---> |    Grafana     |
+| Exposes /metrics|      | Scrapes metrics|      |   Visualizes   |
++-----------------+      +----------------+      |    metrics     |
+                                                 +----------------+
+```
 
-         +----------------+
-         |   Logstash     |
-         | Processes logs |
-         | and pushes to  |
-         | Elasticsearch  |
-         +--------+-------+
-                  |
-                  v
-         +----------------+
-         |    Kibana      |
-         | Queries logs   |
-         +----------------+
+```text
++----------------+      +----------------+      +----------------+
+|   Logstash     | ---> | Elasticsearch  | ---> |    Kibana      |
+| Processes logs |      | stores logs    |      | Queries logs   |
++----------------+      +----------------+      +----------------+
+
 ```
 ## Solving Scaling Issues
 
