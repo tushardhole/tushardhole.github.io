@@ -5,6 +5,24 @@ body {
   background-color: #0d0d0d; /* very dark background */
   color: #00ff00; /* bright green text */
   font-family: 'Fira Code', 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header (site name and subtitle) */
+.site-name a {
+  color: #00ff88; /* brighter green for title */
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(0, 255, 136, 0.5);
+}
+
+.site-description {
+  color: #a0ffcc; /* lighter green for subtitle */
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  text-shadow: 0 0 2px rgba(160, 255, 204, 0.5);
 }
 
 /* Headings */
@@ -12,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #00ff00; /* bright green */
   border-bottom: 1px solid #00ff00;
   padding-bottom: 0.2em;
+  margin-top: 1.2em;
 }
 
 /* Links */
@@ -21,6 +40,16 @@ a {
 }
 a:hover {
   color: #ff00ff; /* magenta on hover */
+}
+
+/* Navigation links */
+nav a {
+  color: #00ffff; /* cyan nav links */
+  margin-left: 1rem;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #ff00ff;
 }
 
 /* Tables */
@@ -49,6 +78,7 @@ pre, code {
   padding: 0.5em;
   border-radius: 3px;
   font-family: 'Fira Code', monospace;
+  overflow-x: auto;
 }
 
 /* Blockquotes */
@@ -71,8 +101,47 @@ hr {
   border-top: 1px solid #00ff00;
 }
 
-/* Optional: make images pop on dark background */
+/* Images */
 img {
   border: 1px solid #00ff00;
   max-width: 100%;
+  display: block;
+  margin: 1em 0;
+}
+
+/* Footer */
+.wrapper-footer {
+  background-color: #0d0d0d;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 1rem 0;
+  color: #00ff00;
+}
+
+.wrapper-footer a {
+  color: #00ffff;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.wrapper-footer a:hover {
+  color: #ff00ff;
+}
+
+/* SVG icons inside footer */
+.footer svg {
+  fill: #00ffff;
+}
+.footer svg:hover {
+  fill: #ff00ff;
+}
+
+/* Main container spacing */
+#main.container {
+  padding: 1rem 2rem;
+}
+
+/* Optional: subtle glow effect for text */
+body, h1, h2, h3, h4, h5, h6, p, a, li, td, th {
+  text-shadow: 0 0 1px #00ff00;
 }
