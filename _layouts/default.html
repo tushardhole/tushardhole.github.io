@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <title>
     {% if page.title %}{{ page.title }} – {% endif %}
@@ -11,18 +12,10 @@
   <!-- Main stylesheet -->
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/custom.css" />
 
-  <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="{{ site.name }} - {{ site.description }}"
-          href="{{ site.baseurl }}/feed.xml"
-  />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
-          rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -62,10 +55,32 @@
       <div style="margin-top: 8px; font-size: 0.9rem;">
         © {{ site.name }} {{ site.time | date: "%Y" }}
       </div>
+
+      <!-- Subscription Form -->
+      <div class="followit--follow-form-container" attr-a attr-b attr-c attr-d attr-e attr-f style="margin-top: 30px;">
+        <form action="https://api.follow.it/subscription-form/bllkQ1kyNzJ2cTJOdzRrcDdydUNPODdvck1KQU5MUHlGU2xkczR1cDdZc0UrUzZPc2M4UG9FVmNyRjZ3ZWEwU2ozZnd1T25yWmFKVzFIaHRhYkQwalFkZXF1OEgzWGduZGVpU3FZc3VPWDZ2TGdQQzF1R2NMdEc4Y2VWQjlYbUd8a2FDWDFXN3pXejhpSDdOL21jTC9tQ0tKaDlRYnFIMW9hM21RQWl1TS9Cbz0=/8" method="post">
+          <div class="form-preview">
+            <div class="preview-heading">
+              <h5>Subscribe for new posts</h5>
+            </div>
+            <div class="preview-input-field">
+              <input type="email" name="email" required placeholder="Enter your email" spellcheck="false" />
+            </div>
+            <div class="preview-submit-button">
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
+        <a href="https://follow.it" class="powered-by-line" style="display: block; margin-top: 10px;">
+          Powered by <img src="https://follow.it/images/colored-logo.svg" alt="follow.it" height="17px" />
+        </a>
+      </div>
+
     </footer>
   </div>
 </div>
 
 {% include analytics.html %}
 </body>
+
 </html>
