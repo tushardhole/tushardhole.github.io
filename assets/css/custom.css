@@ -40,7 +40,7 @@ body {
 /* Navigation links */
 nav a {
   color: #00FFFF; /* cyan nav links */
-  margin-left: 1rem;
+  margin-left: 3rem;
   font-weight: 500;
   text-decoration: none;
 }
