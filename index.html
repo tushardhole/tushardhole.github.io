@@ -2,17 +2,76 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<style>
+  body {
+    background-color: #1e1e1e; /* dark terminal background */
+    color: #dcdcdc; /* light gray text */
+    font-family: "Fira Code", "Consolas", "Menlo", monospace;
+  }
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  h1 {
+    color: #00bfa5; /* teal prompt color */
+    border-bottom: 1px solid #333;
+    padding-bottom: 4px;
+  }
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+  th {
+    text-align: left;
+    color: #ffcc00; /* yellow header like directory listing */
+    font-weight: normal;
+  }
+
+  td {
+    padding: 6px 0;
+  }
+
+  td.date {
+    color: #00ff88; /* green date (zsh-style) */
+    width: 160px;
+  }
+
+  td.title {
+    color: #dcdcdc;
+  }
+
+  td.link a {
+    color: #61afef; /* cyan link */
+    text-decoration: none;
+  }
+
+  td.link a:hover {
+    color: #98c379; /* greenish on hover */
+  }
+
+  /* subtle hover effect per row */
+  tr:hover td {
+    background-color: #2b2b2b;
+  }
+</style>
+
+<h1>~/blog</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for post in site.posts %}
+      <tr>
+        <td class="date">{{ post.date | date: "%Y-%m-%d" }}</td>
+        <td class="title">{{ post.title }}</td>
+        <td class="link"><a href="{{ site.baseurl }}{{ post.url }}">open</a></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
