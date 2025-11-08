@@ -7,8 +7,6 @@ tags: [observability, monitoring, scaling, databases, caching, message-queue, Ka
 description: "A quick, no-nonsense guide to system design concepts you need before interviews. Observability, monitoring, scaling, databases, caching, and message queues explained in 5 minutes."
 ---
 
-# The 5-Minute System Design Survival Guide
-
 System design interviews can be intimidating, but a few **core concepts** will help you stay confident. Here’s a quick guide covering **observability, monitoring, scaling, databases, caching, and message queues**, with examples and diagrams.
 
 ---
@@ -155,3 +153,4 @@ Cache: Redis (dynamic) + CDN (optional)
 -> If Redis cache hit, return cached data
 -> If Redis cache miss, fetch from DB -> store in Redis -> serve to user
 -> CDN caches the response for subsequent global requests
+```
