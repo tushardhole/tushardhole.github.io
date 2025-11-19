@@ -172,3 +172,18 @@ img {
 .site-name a {
   text-shadow: 0 0 3px rgba(0, 255, 0, 0.5);
 }
+
+/* Justify text for posts with the 'justify' front matter */
+.post.justify .post-content {
+    text-align: justify;
+}
+
+/* This targets elements with the class 'language-mermaid' */
+.language-mermaid {
+  display: block !important;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+

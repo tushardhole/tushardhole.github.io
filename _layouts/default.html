@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Process all elements with 'language-mermaid' class
+      mermaid.initialize({ startOnLoad: true });
+
+      // Force Mermaid to process any language-mermaid code blocks manually
+      document.querySelectorAll('.language-mermaid').forEach(function(el) {
+        mermaid.contentLoaded();
+      });
+    });
+  </script>
+
+
   <meta name="follow.it-verification-code" content="vu3ZmV9pagabfAt5smtj"/>
   <title>
     {% if page.title %}{{ page.title }} – {% endif %}
